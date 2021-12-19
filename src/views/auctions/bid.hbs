@@ -1,0 +1,109 @@
+<!-- Section-->
+<section class="py-5">
+  
+  <div class="container px-4 px-lg-5 mt-5">
+    {{!-- {{#if user}} --}}
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+      {{#each auctions}}
+      <div class="col mb-5">
+        <div class="card h-100">
+          <!-- Product image-->
+          <img class="card-img-top" src="{{ image}} alt="..." />
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">{{ description }}</h5>
+              <!-- Product status-->
+              <div class="d-flex justify-content-center small text-warning mb-2">
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+              </div>
+
+              <!-- Product price-->
+              <h7>Estimado Inicial: {{startingprice }}</h7>
+              <br>
+              <h7><strong>Subasta Comineza en: </strong></h7>
+              <br>
+              <h7> {{ auctionstart }}</h7>
+              <h7><strong>Subasta cierra en: </strong></h7>
+              <br>
+              <h7> {{ endauction }}</h7>
+              
+                </div>
+                
+            </div>
+            
+     
+        <div class="card-header">
+            <h3>Ofrecer</h3>
+        </div>
+        <div class="card-body">
+            <form action="auctions/all-bids" method="POST">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="$" autofocus />
+                </div>
+                
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Registrar Puja
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        </div>
+      </div>
+       {{/each}}
+    </div>
+     {{!-- {{else}}
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+      {{#each auctions}}
+      <div class="col mb-5">
+        <div class="card h-100">
+          <!-- Product image-->
+          <img class="card-img-top" src="{{ image}} alt="..." />
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">{{ description }}</h5>
+              <!-- Product status-->
+              <div class="d-flex justify-content-center small text-warning mb-2">
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+                <div class="bi-star-fill"></div>
+              </div>
+
+              <!-- Product price-->
+              <h7>Estimado Inicial: {{startingprice }}</h7>
+              <br>
+              <h7><strong>Subasta Comineza en: </strong></h7>
+              <br>
+              <h7> {{ auctionstart }}</h7>
+              <h7><strong>Subasta cierra en: </strong></h7>
+              <br>
+              <h7> {{ endauction }}</h7>
+              
+                </div>
+                
+            </div>
+            <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        hola
+                    </button>
+          </div>
+        </div>
+      </div>
+       {{/each}}
+    </div>
+
+    {{/if}}
+  </div> --}}
+ 
+</section>
